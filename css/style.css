@@ -1,0 +1,403 @@
+@font-face {
+  font-family: "open sans light";
+  src: url("../../fonts/opensans-light.woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "open sans light-italic";
+  src: url("../../fonts/opensans-lightitalic.woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "open sans regular";
+  src: url("../../fonts/opensans-regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "open sans semibold";
+  src: url("../../fonts/opensans-semibold.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "cormorant light-italic";
+  src: url("../../fonts/cormorant-lightitalic.woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "cormorant regular";
+  src: url("../../fonts/cormorant-regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-actions, .menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.top__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "open sans light";
+  color: #151618;
+  font-size: 20px;
+  line-height: 1.5;
+  position: relative;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.header__inner {
+  min-width: 140px;
+  padding: 30px 0;
+}
+
+.logo--header {
+  margin-bottom: 35px;
+}
+
+.menu__btn {
+  display: none;
+  position: relative;
+}
+
+.image-btn {
+  z-index: 2;
+}
+
+.mobile-nav,
+.menu__close {
+  display: none;
+}
+
+.menu--close {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  transition: background-color 0.3s ease;
+}
+
+.menu--close.menu--open {
+  display: block;
+}
+
+.menu__list {
+  font-family: "open sans regular";
+  font-size: 18px;
+  line-height: normal;
+  gap: 0 65px;
+  margin-left: 85px;
+  position: relative;
+  z-index: 3;
+}
+
+.user-actions {
+  gap: 0 20px;
+}
+
+.user-actions__item--search {
+  margin-left: 80px;
+}
+
+@media (max-width: 1000px) {
+  .header__inner {
+    min-height: auto;
+  }
+  .logo--header {
+    margin-bottom: 0;
+  }
+  .menu {
+    margin-right: auto;
+  }
+  .menu__list {
+    margin-left: 60px;
+  }
+  .user-actions__item--search {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 860px) {
+  .menu__list {
+    transform: translateY(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 480px;
+    margin: 0 auto;
+    background-color: #fff;
+    display: block;
+    text-align: center;
+    padding-top: 60px;
+    transition: transform 0.6s ease;
+  }
+  .menu__list.menu__list--open {
+    transform: translateY(0%);
+  }
+  .menu__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .menu__item {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: "cormorant regular";
+  }
+  .mobile-menu {
+    padding-top: 60px;
+    margin: 60px 30px;
+    border-top: 2px solid #F7F2EA;
+  }
+  .mobile-menu__item {
+    margin-bottom: 35px;
+  }
+  .mobile-actions {
+    background-color: #F7F2EA;
+    height: 60px;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile-nav,
+  .menu__close {
+    display: block;
+  }
+  .menu__btn {
+    display: block;
+  }
+  .menu {
+    order: -1;
+    margin: 0;
+  }
+  .logo--header {
+    margin: 0 154px 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .header__inner {
+    padding: 30px 44px;
+  }
+}
+@media (max-width: 680px) {
+  .container {
+    padding: 0 10px;
+  }
+  .header__inner {
+    padding: 10px 0;
+  }
+  .menu__list {
+    width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .logo--header {
+    margin-right: 80px;
+  }
+  .logo--header img {
+    width: 40px;
+  }
+  .menu__list {
+    width: 360px;
+  }
+}
+@media (max-width: 360px) {
+  .logo--header {
+    margin-right: 50px;
+  }
+  .user-actions__item--search {
+    margin-left: 0;
+  }
+}
+.top {
+  background: url("../img/top-bg.jpg") 0 0/cover no-repeat;
+}
+
+.top__inner {
+  min-height: 500px;
+  color: #fff;
+  font-family: "cormorant regular";
+  justify-content: flex-end;
+}
+
+.top__title {
+  font-size: 60px;
+  line-height: 1;
+  margin-bottom: 20px;
+  max-width: 790px;
+}
+
+.top__text {
+  font-size: 24px;
+  line-height: normal;
+  margin-bottom: 50px;
+  max-width: 560px;
+}
+
+@media (max-width: 680px) {
+  .top__title {
+    font-size: 40px;
+    line-height: normal;
+  }
+}
+@media (max-width: 360px) {
+  .top__inner {
+    min-height: 367px;
+  }
+  .top__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .top__text {
+    font-family: "open sans light";
+    font-size: 13px;
+    max-width: 332px;
+    margin-bottom: 30px;
+  }
+}
+.blockquote__text {
+  font-family: "cormorant light-italic";
+  font-size: 40px;
+  line-height: normal;
+  max-width: 700px;
+  margin: 150px auto;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .blockquote__text {
+    margin: 120px auto 135px;
+  }
+}
+@media (max-width: 768px) {
+  .blockquote__text {
+    max-width: 640px;
+  }
+}
+@media (max-width: 680px) {
+  .blockquote__text {
+    font-family: "open sans light-italic";
+    font-size: 16px;
+    max-width: 375px;
+    margin: 60px auto;
+  }
+}
+@media (max-width: 360px) {
+  .blockquote__text {
+    max-width: 340px;
+    margin: 70px auto 80px;
+  }
+}/*# sourceMappingURL=style.css.map */

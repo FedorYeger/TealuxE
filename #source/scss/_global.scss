@@ -1,0 +1,16 @@
+body{
+  font-family: 'open sans light';
+  color: $main-color;
+  @include text(20px, 1.5);
+  position: relative;
+}
+.wrapper{
+  min-height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.container{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0px 20px ;
+}
