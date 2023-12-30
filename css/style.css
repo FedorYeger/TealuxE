@@ -1,41 +1,41 @@
 @font-face {
   font-family: "open sans light";
-  src: url("/fonts/opensans-light.woff2");
+  src: url("../fonts/opensans-light.woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "open sans light-italic";
-  src: url("/fonts/opensans-lightitalic.woff2");
+  src: url("../fonts/opensans-lightitalic.woff2");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "open sans regular";
-  src: url("/fonts/opensans-regular.woff2");
+  src: url("../fonts/opensans-regular.woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "open sans semibold";
-  src: url("/fonts/opensans-semibold.woff2");
+  src: url("../fonts/opensans-semibold.woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "cormorant light-italic";
-  src: url("/fonts/cormorant-lightitalic.woff");
+  src: url("../fonts/cormorant-lightitalic.woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "cormorant regular";
-  src: url("/fonts/cormorant-regular.woff2");
+  src: url("../fonts/cormorant-regular.woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
