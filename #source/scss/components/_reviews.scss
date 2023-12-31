@@ -1,0 +1,32 @@
+.reviews {
+  background-color: $background-color;
+  padding: 60px 0;
+}
+.reviews__title {
+}
+.reviews__list{
+  display: flex;
+  justify-content: center;
+  gap: 0 26px
+}
+.reviews__item{
+  flex-basis: 280px;
+}
+.reviews__text {
+  font-family: 'open sans light-italic';
+  @include text(16px, normal);
+  margin-bottom: 10px;
+}
+.reviews__name {
+  font-family: 'open sans semibold';
+  @include text(20px, normal);
+  font-style: normal;
+}
+
+
+
+@media (max-width: 1000px){
+  .reviews__item:last-child{
+    display: none;
+  }
+}
