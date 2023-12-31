@@ -1,4 +1,15 @@
-.blockquote {
+.blockquote{
+  position: relative;
+}
+.blockquote::after {
+  @extend%element;
+  bottom: -30%;
+  right: 20%;
+  width: 360px;
+  height: 60px;
+  background-color: $background-color;
+  z-index: -1;
+
 }
 .blockquote__text {
   font-family: 'cormorant light-italic';
@@ -17,11 +28,17 @@
 }
 
 @media (max-width: 768px){
+  .blockquote::after{
+    width: 270px;
+  }
   .blockquote__text{
     max-width: 640px;
   }
 }
 @media (max-width: 680px){
+  .blockquote::after{
+    display: none;
+  }
   .blockquote__text{
     font-family: "open sans light-italic";
     font-size: 16px;
