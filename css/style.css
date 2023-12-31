@@ -129,9 +129,15 @@ button {
   align-items: center;
 }
 
-.top__inner {
+.main-blog__item-content, .top__inner {
   display: flex;
   flex-direction: column;
+}
+
+.checkbox:checked + .checkbox-style::before, .main-blog__item-link::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
 }
 
 body {
@@ -526,5 +532,334 @@ body {
   }
   .reviews__item {
     flex-basis: 340px;
+  }
+}
+.main-blog {
+  padding: 150px 0;
+}
+
+.main-blog__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 58px;
+}
+
+.main-blog__item {
+  flex-basis: 542px;
+  display: flex;
+  gap: 0 20px;
+}
+
+.main-blog__item-title {
+  font-family: "cormorant regular";
+  font-size: 24px;
+  line-height: normal;
+  min-height: 86px;
+}
+
+.main-blog__item-author {
+  font-size: 13px;
+  line-height: normal;
+}
+
+.main-blog__item-link {
+  font-size: 13px;
+  line-height: normal;
+  margin-top: auto;
+  position: relative;
+}
+
+.main-blog__item-link::after {
+  background-image: url("../img/icons/arrow.svg");
+  height: 10px;
+  width: 5px;
+  margin-left: 8px;
+  transform: translateY(50%);
+}
+
+.menu-blog__link {
+  display: flex;
+  justify-content: center;
+  padding: 12px 41px;
+  margin: 60px auto 0;
+  border: 1px solid #151618;
+  width: 150px;
+}
+
+@media (max-width: 1000px) {
+  .main-blog {
+    padding: 120px 0;
+  }
+  .main-blog__item-img {
+    max-width: 230px;
+  }
+  .main-blog__item {
+    flex-basis: 460px;
+  }
+  .main-blog__list {
+    gap: 67px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .main-blog__item-img {
+    max-width: 270px;
+  }
+  .main-blog__item {
+    flex-basis: 542px;
+  }
+  .main-blog__list {
+    gap: 30px 20px;
+  }
+  .main-blog__item:nth-child(even) {
+    margin-left: 98px;
+  }
+}
+@media (max-width: 680px) {
+  .main-blog__item:nth-child(even) {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .main-blog {
+    padding: 60px 0;
+  }
+  .main-blog__item-img {
+    max-width: 230px;
+  }
+  .main-blog__item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-blog__item-title {
+    min-height: 0;
+    margin: 10px auto 5px;
+    max-width: 230px;
+  }
+  .main-blog__item-author {
+    margin-bottom: 10px;
+  }
+  .menu-blog__link {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .main-blog {
+    padding: 50px 0;
+  }
+  .main-blog__item-img {
+    max-width: 100%;
+  }
+  .main-blog__item:last-child,
+  .main-blog__item:nth-last-child(2) {
+    display: none;
+  }
+}
+.mailing-list {
+  padding: 100px 0;
+  background-color: #F7F2EA;
+  background-image: url("../img/mailing-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.mailing-list__title {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.mailing-list__inner {
+  display: flex;
+  align-items: center;
+  gap: 60px 40px;
+}
+
+.mailing-list__text {
+  flex-basis: 580px;
+}
+
+.mailing-list__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 580px;
+}
+
+.mailing-list__email {
+  border: none;
+  border-bottom: 1px solid #B8B58B;
+  background-color: transparent;
+  padding: 3px 15px;
+  width: 438px;
+  margin-right: 25px;
+  font-family: "open sans light";
+  font-size: 20px;
+  line-height: 1.5;
+  color: #151618;
+}
+
+.mailing-list__email::-moz-placeholder {
+  font-family: "open sans light";
+  font-size: 20px;
+  line-height: 1.5;
+  color: #B8B58B;
+}
+
+.mailing-list__email::placeholder {
+  font-family: "open sans light";
+  font-size: 20px;
+  line-height: 1.5;
+  color: #B8B58B;
+}
+
+.mailing-list__btn {
+  font-family: "open sans light";
+  font-size: 20px;
+  line-height: normal;
+  background-color: #fff;
+  color: #151618;
+  border: 1px solid #151618;
+  padding: 12px 41px;
+}
+
+label {
+  margin-top: 16px;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  padding-left: 20px;
+}
+
+.checkbox-style {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #151618;
+  background-color: #fff;
+  transform: translateY(50%);
+}
+
+.checkbox:checked + .checkbox-style::before {
+  width: 6px;
+  height: 6px;
+  background-color: #151618;
+  top: 1px;
+  right: 1px;
+}
+
+.checkbox__text {
+  font-size: 13px;
+  line-height: normal;
+  padding-left: 20px;
+}
+
+@media (max-width: 1000px) {
+  .mailing-list {
+    padding: 60px 0;
+  }
+  .mailing-list__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mailing-list__title {
+    text-align: center;
+  }
+  .mailing-list__text {
+    text-align: center;
+    flex-basis: 780px;
+  }
+}
+@media (max-width: 768px) {
+  .mailing-list__text {
+    flex-basis: 640px;
+  }
+}
+@media (max-width: 480px) {
+  .mailing-list {
+    padding: 50px 0;
+  }
+  .mailing-list__text {
+    font-size: 13px;
+    flex-basis: 460px;
+  }
+  .mailing-list__inner {
+    gap: 30px 0;
+  }
+  .mailing-list__email {
+    width: 324px;
+    margin-right: 20px;
+  }
+  .mailing-list__btn {
+    padding: 10px 39px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .mailing-list__email {
+    width: 100%;
+  }
+  .mailing-list__btn {
+    margin: 10px auto 0;
+  }
+}
+.prioritise {
+  padding: 150px 0;
+}
+
+.prioritise__list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 31px 49px;
+}
+
+.prioritise__title {
+  font-size: 30px;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.prioritise__text {
+  font-family: "open sans semibold";
+  font-size: 20px;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1000px) {
+  .prioritise {
+    padding: 120px 0;
+  }
+  .prioritise__list {
+    gap: 31px 210px;
+  }
+}
+@media (max-width: 768px) {
+  .prioritise__list {
+    gap: 31px 133px;
+  }
+}
+@media (max-width: 480px) {
+  .prioritise {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 360px) {
+  .prioritise {
+    padding: 50px 0;
+  }
+  .prioritise__title {
+    font-size: 20px;
+  }
+  .prioritise__text {
+    font-family: "open sans regular";
+    font-size: 10px;
+  }
+  .prioritise__list {
+    gap: 40px 100px;
   }
 }/*# sourceMappingURL=style.css.map */
