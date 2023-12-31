@@ -461,13 +461,13 @@ body {
   .assortment {
     margin-bottom: 60px;
   }
+  .assortment__img {
+    max-width: 170px;
+  }
 }
 @media (max-width: 360px) {
   .assortment {
     margin-bottom: 80px;
-  }
-  .assortment__img {
-    max-width: 170px;
   }
 }
 .reviews {
